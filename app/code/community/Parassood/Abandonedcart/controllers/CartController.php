@@ -60,5 +60,10 @@ class Parassood_Abandonedcart_CartController extends Mage_Core_Controller_Front_
         return $info;
     }
 
+    public function testAction()
+    {
+        Mage::getModel('parassood_abandonedcart/observer')->sendAbandonedCartEmail();
+    }
+
 
 }
